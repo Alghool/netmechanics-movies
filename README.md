@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-##Netmechanics-movies
+##  Netmechanics-movies
 
 is a side project built with laravel 
 that collect movies data and represent it to public 

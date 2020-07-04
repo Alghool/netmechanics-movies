@@ -30,4 +30,9 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
 
+    'tmdb' => [
+        'link' => 'http://api.themoviedb.org/3/',
+        'token' => 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyMDRmMGUxZTQ2NjMwYTY2NmViYmVhNzIzY2ZlYjY2MiIsInN1YiI6IjVlZmVkNTdhYmU3ZjM1MDAzNWE5ZGI5ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Ob9X2gJmw3RY5OdkedVguy-PSzPtxnqya_MbC8sAtLk'
+    ]
+
 ];
