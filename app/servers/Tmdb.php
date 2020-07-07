@@ -14,6 +14,7 @@ class Tmdb
     private $moviesGenre = 'genre/movie/list';
     private $moviesNowPlaying = 'movie/now_playing';
     private $moviesTopRated = 'movie/top_rated';
+    private $searchMovies = 'search/movie' ;
     private $movie = 'movie/';
 
     public function __construct( )
@@ -52,6 +53,11 @@ class Tmdb
 
     public function movie($movieID){
         $this->callServer($this->movie.$movieID, '');
+        return $this;
+    }
+
+    public function searchMovies($searchKey){
+        $this->callServer($this->searchMovies."?query=".$searchKey, 'results');
         return $this;
     }
 

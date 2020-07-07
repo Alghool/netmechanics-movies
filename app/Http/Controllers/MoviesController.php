@@ -10,9 +10,9 @@ class MoviesController extends Controller
     {
         $tmdb = resolve('tmdb');
 
-        $popularMovies = $tmdb->popularMovies()->getResult()->slice(0,10);
-        $topRatedMovies = $tmdb->moviesTopRated()->getResult()->slice(0,10);
-        $nowPlayingMovies = $tmdb->moviesNowPlaying()->getResult()->slice(0,10);
+        $popularMovies = $tmdb->popularMovies()->getResult()->take(10);
+        $topRatedMovies = $tmdb->moviesTopRated()->getResult()->take(10);
+        $nowPlayingMovies = $tmdb->moviesNowPlaying()->getResult()->take(10);
         $genresArray = $tmdb->moviesGenre()->get();
 
         $genres = collect($genresArray)->mapWithKeys(function($genre){
