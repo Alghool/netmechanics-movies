@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 
+use App\ViewModels\MoviesViewModel;
+use App\ViewModels\MovieViewModel;
+
 class MoviesController extends Controller
 {
 
@@ -13,20 +16,18 @@ class MoviesController extends Controller
         $popularMovies = $tmdb->popularMovies()->getResult()->take(10);
         $topRatedMovies = $tmdb->moviesTopRated()->getResult()->take(10);
         $nowPlayingMovies = $tmdb->moviesNowPlaying()->getResult()->take(10);
-        $genresArray = $tmdb->moviesGenre()->get();
+        $genres = $tmdb->moviesGenre()->get();
 
-        $genres = collect($genresArray)->mapWithKeys(function($genre){
-            return [$genre['id'] => $genre['name']];
-        });
 
-        $data = [
-            'popularMovies' => $popularMovies,
-            'nowPlayingMovies' => $nowPlayingMovies,
-            'topRatedMovies' => $topRatedMovies,
-            'genres' => $genres
-        ];
 
-         return view('index',$data);
+        $moviesViewModel = new MoviesViewModel(
+            $popularMovies,
+            $nowPlayingMovies,
+            $topRatedMovies,
+            $genres
+        );
+
+         return view('index',$moviesViewModel);
 
     }
 
@@ -36,7 +37,7 @@ class MoviesController extends Controller
 
         $movie = $tmdb->with(['credits','videos','images'])->movie($id)->get();
 
-        return view('show',['movie' => $movie]);
+        return view('show',new MovieViewModel($movie));
      }
 
 }
