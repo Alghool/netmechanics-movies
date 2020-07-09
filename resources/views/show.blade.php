@@ -29,13 +29,11 @@
                     <h4 class="text-white font-semibold">Featured Crew</h4>
                     <div class="flex mt-4">
                         @foreach ($movie['credits']['crew'] as $crew)
-                            @if ($loop->index < 2)
+                            @if ($loop->index > 1) @break @endif
                                 <div class="mr-8">
                                     <div>{{ $crew['name'] }}</div>
                                     <div class="text-sm text-gray-400">{{ $crew['job'] }}</div>
                                 </div>
-                            @endif
-
                         @endforeach
                     </div>
                 </div>
@@ -86,7 +84,7 @@
             <h2 class="text-4xl font-semibold">Cast</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 @foreach ($movie['credits']['cast'] as $cast)
-                    @if ($loop->index < 5)
+                    @if ($loop->index > 4) @break @endif
 
                         <div class="mt-8">
                             <a href="#">
@@ -99,7 +97,6 @@
                                 </div>
                             </div>
                         </div>
-                    @endif
                 @endforeach
             </div>
         </div>
@@ -110,7 +107,7 @@
             <h2 class="text-4xl font-semibold">Images</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                 @foreach ($movie['images']['backdrops'] as $image)
-                    @if ($loop->index < 9)
+                    @if ($loop->index > 8) @break @endif
                         <div class="mt-8">
                             <a
                                     @click.prevent="
@@ -122,7 +119,6 @@
                                 <img src="{{ 'https://image.tmdb.org/t/p/w500/'.$image['file_path'] }}" alt="image1" class="hover:opacity-75 transition ease-in-out duration-150">
                             </a>
                         </div>
-                    @endif
                 @endforeach
             </div>
             <div
