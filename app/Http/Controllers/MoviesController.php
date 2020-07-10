@@ -27,7 +27,7 @@ class MoviesController extends Controller
             $genres
         );
 
-         return view('index',$moviesViewModel);
+         return view('movies.index',$moviesViewModel);
 
     }
 
@@ -37,7 +37,7 @@ class MoviesController extends Controller
 
         $movie = $tmdb->with(['credits','videos','images'])->movie($id)->get();
 
-        return view('show',new MovieViewModel($movie));
+        return view('movies.show',new MovieViewModel($movie));
      }
 
 }

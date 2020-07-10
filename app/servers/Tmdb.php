@@ -9,12 +9,14 @@ class Tmdb
     private $resultKey = null;
     private $returnType = 'collection';
     private $append = [];
+    private $page = 1;
 
     private $popularMovies = 'movie/popular';
     private $moviesGenre = 'genre/movie/list';
     private $moviesNowPlaying = 'movie/now_playing';
     private $moviesTopRated = 'movie/top_rated';
     private $searchMovies = 'search/movie' ;
+    private $popularActors = 'person/popular' ;
     private $movie = 'movie/';
 
     public function __construct( )
@@ -44,6 +46,10 @@ class Tmdb
             $this->append[] = $append;
         }
         return $this;
+    }
+
+    public function page($pageNo){
+        $this->page = $pageNo;
     }
 
     public function moviesGenre(){
@@ -76,8 +82,13 @@ class Tmdb
         return $this;
     }
 
+    public function popularActors(){
+        $this->callServer($this->popularActors, 'results');
+        return $this;
+    }
+
     private function callServer($endPoint, $resultKey){
-        $this->response = $this->http->get(Config('services.tmdb.link').$endPoint.$this->getAppendString())->json();
+        $this->response = $this->http->get(Config('services.tmdb.link').$endPoint.$this->getAppendString().$this->getPage())->json();
         $this->resultKey = $resultKey;
     }
 
@@ -87,6 +98,7 @@ class Tmdb
 
     private function clear(){
         $this->append = [];
+        $this->page = 1;
     }
 
     private function getAppendString(){
@@ -99,5 +111,9 @@ class Tmdb
             $return = substr($return, 0, -1);
         }
         return $return;
+    }
+
+    private function getPage(){
+        return (!empty($this->append))? 'page='.$this->page : '?page='.$this->page;
     }
 }
