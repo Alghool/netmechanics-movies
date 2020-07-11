@@ -114,6 +114,6 @@ class Tmdb
     }
 
     private function getPage(){
-        return (!empty($this->append))? 'page='.$this->page : '?page='.$this->page;
+        return (!empty($this->append))? '&page='.$this->page : '?page='.$this->page;
     }
 }
