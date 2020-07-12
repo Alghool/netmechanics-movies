@@ -17,6 +17,7 @@ class Tmdb
     private $moviesTopRated = 'movie/top_rated';
     private $searchMovies = 'search/movie' ;
     private $popularActors = 'person/popular' ;
+    private $actor = 'person/' ;
     private $movie = 'movie/';
 
     public function __construct( )
@@ -50,6 +51,7 @@ class Tmdb
 
     public function page($pageNo){
         $this->page = $pageNo;
+        return $this;
     }
 
     public function moviesGenre(){
@@ -84,6 +86,11 @@ class Tmdb
 
     public function popularActors(){
         $this->callServer($this->popularActors, 'results');
+        return $this;
+    }
+
+    public function actor($actorID){
+        $this->callServer($this->actor.$actorID, '');
         return $this;
     }
 
