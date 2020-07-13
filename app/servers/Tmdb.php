@@ -13,10 +13,14 @@ class Tmdb
 
     private $popularMovies = 'movie/popular';
     private $moviesGenre = 'genre/movie/list';
+    private $tvGenre = 'genre/tv/list';
     private $moviesNowPlaying = 'movie/now_playing';
     private $moviesTopRated = 'movie/top_rated';
-    private $searchMovies = 'search/movie' ;
-    private $popularActors = 'person/popular' ;
+    private $searchMovies = 'search/movie';
+    private $popularActors = 'person/popular';
+    private $popularTv = 'tv/popular';
+    private $topRatedTv = 'tv/top_rated';
+    private $tv = 'tv/';
     private $actor = 'person/' ;
     private $movie = 'movie/';
 
@@ -59,6 +63,11 @@ class Tmdb
         return $this;
     }
 
+    public function tvGenre(){
+        $this->callServer($this->tvGenre, 'genres');
+        return $this;
+    }
+
     public function movie($movieID){
         $this->callServer($this->movie.$movieID, '');
         return $this;
@@ -86,6 +95,21 @@ class Tmdb
 
     public function popularActors(){
         $this->callServer($this->popularActors, 'results');
+        return $this;
+    }
+
+    public function popularTv(){
+        $this->callServer($this->popularTv, 'results');
+        return $this;
+    }
+
+    public function topRatedTv(){
+        $this->callServer($this->topRatedTv, 'results');
+        return $this;
+    }
+
+    public function tv($tvID){
+        $this->callServer($this->tv.$tvID, '');
         return $this;
     }
 

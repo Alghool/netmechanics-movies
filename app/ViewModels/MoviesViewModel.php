@@ -26,7 +26,7 @@ class MoviesViewModel extends ViewModel
                 'poster_path' => 'https://image.tmdb.org/t/p/w500/'.$movie['poster_path'],
                 'vote_average' => $movie['vote_average'] * 10 .'%',
                 'release_date' => Carbon::parse($movie['release_date'])->format('M d, Y'),
-                'genres' =>   $this->formatedMovieGenreStr($movie)
+                'genres' =>   $this->formattedMovieGenreSir($movie)
             ])->only([
                 'id', 'title', 'genres', 'poster_path', 'vote_average', 'release_date', 'overview'
             ]);
@@ -39,7 +39,7 @@ class MoviesViewModel extends ViewModel
         });
     }
 
-    private function formatedMovieGenreStr($movie){
+    private function formattedMovieGenreSir($movie){
         return collect($movie['genre_ids'])->mapWithKeys(function ($genreID){
             return [$genreID=>$this->genres[$genreID]];
         })->implode(', ');
