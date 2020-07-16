@@ -28,7 +28,7 @@ class ActorViewModel extends ViewModel
             'age' => Carbon::parse($actor['birthday'])->age,
             'profile_path' => $actor['profile_path']
                 ?'https://image.tmdb.org/t/p/w300/'.$actor['profile_path']
-                :'https://via.placeholder.com/300x450',
+                :asset('img/placeholder.png'),
         ])->only([
             'birthday', 'age', 'profile_path', 'name', 'id', 'homepage', 'place_of_birth', 'biography'
         ]);
@@ -50,7 +50,7 @@ class ActorViewModel extends ViewModel
                 return collect($movie)->merge([
                     'poster_path' => $movie['poster_path']
                         ? 'https://image.tmdb.org/t/p/w185'.$movie['poster_path']
-                        : 'https://via.placeholder.com/185x278',
+                        : asset('img/placeholder.png'),
                     'title' => isset($movie['title']) ? $movie['title'] : 'Untitled',
                 ])->only([
                     'poster_path', 'title', 'id', 'media_type'

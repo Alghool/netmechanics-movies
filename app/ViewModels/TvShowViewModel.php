@@ -26,7 +26,7 @@ class TvShowViewModel extends ViewModel
                 return collect($cast)->merge([
                     'profile_path' => $cast['profile_path']
                         ? 'https://image.tmdb.org/t/p/w300'.$cast['profile_path']
-                        : 'https://via.placeholder.com/300x450',
+                        : asset('img/placeholder.png'),
                 ]);
             }),
             'images' => collect($tvShow['images']['backdrops'])->take(9),

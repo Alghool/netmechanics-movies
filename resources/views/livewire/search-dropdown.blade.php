@@ -27,16 +27,15 @@
                 <ul>
                     @foreach ($searchResults as $result)
                         <li class="border-b border-gray-700">
-                            <a
-                                    @if($loop->last) @keydown.tab="isOpen=false" @endif
-                                    href="{{ route('movies.show', $result['id']) }}" class="block hover:bg-gray-700 px-3 py-3 flex items-center transition ease-in-out duration-150">
-                            @if ($result['poster_path'])
-                                <img src="https://image.tmdb.org/t/p/w92/{{ $result['poster_path'] }}" alt="poster" class="w-8">
-                            @else
-                                <img src="https://via.placeholder.com/50x75" alt="poster" class="w-8">
-                            @endif
-                            <span class="ml-4">{{ $result['title'] }}</span>
-                        </a>
+                            <a  @if($loop->last) @keydown.tab="isOpen=false" @endif
+                                href="{{ $result['link'] }}" class="block hover:bg-gray-700 px-3 py-3 flex items-center transition ease-in-out duration-150">
+                                <img src="{{ $result['poster'] }}" alt="poster" class="w-8">
+                                <div class="inline-block ml-4">
+                                    <span class="block">{{ $result['type'] }}</span>
+                                    <span class="">{{ $result['name'] }}</span>
+                                </div>
+
+                            </a>
                         </li>
                     @endforeach
 

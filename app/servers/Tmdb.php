@@ -17,6 +17,7 @@ class Tmdb
     private $moviesNowPlaying = 'movie/now_playing';
     private $moviesTopRated = 'movie/top_rated';
     private $searchMovies = 'search/movie';
+    private $search = '/search/multi';
     private $popularActors = 'person/popular';
     private $popularTv = 'tv/popular';
     private $topRatedTv = 'tv/top_rated';
@@ -75,6 +76,11 @@ class Tmdb
 
     public function searchMovies($searchKey){
         $this->callServer($this->searchMovies."?query=".$searchKey, 'results');
+        return $this;
+    }
+
+    public function search($searchKey){
+        $this->callServer($this->search."?query=".$searchKey, 'results');
         return $this;
     }
 
@@ -145,6 +151,10 @@ class Tmdb
     }
 
     private function getPage(){
-        return (!empty($this->append))? '&page='.$this->page : '?page='.$this->page;
+        if($this->page != 1)
+            return (!empty($this->append))? '&page='.$this->page : '?page='.$this->page;
+        else
+            return '';
+
     }
 }

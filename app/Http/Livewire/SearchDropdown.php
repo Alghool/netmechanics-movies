@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\ViewModels\SearchViewModel;
 use Livewire\Component;
 
 class SearchDropdown extends Component
@@ -10,11 +11,11 @@ class SearchDropdown extends Component
 
     public function render()
     {
-        $searchResults = [];
+        $searchResults = collect();
         if(strlen($this->search) >= 2){
             $tmdb = resolve('tmdb');
-            $searchResults = $tmdb->searchMovies($this->search)->get()->take(5);
+            $searchResults = $tmdb->search($this->search)->get()->take(5);
         }
-        return view('livewire.search-dropdown',['searchResults' => $searchResults]);
+        return view('livewire.search-dropdown',new SearchViewModel($searchResults));
     }
 }
