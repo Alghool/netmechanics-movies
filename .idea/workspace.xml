@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8946f4c5-96da-4b9c-8a51-807456fc72aa" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MoviesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MoviesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Livewire/SearchDropdown.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Livewire/SearchDropdown.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ViewModels/ActorViewModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ViewModels/ActorViewModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ViewModels/ActorsViewModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ViewModels/ActorsViewModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ViewModels/MovieViewModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ViewModels/MovieViewModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ViewModels/TvShowViewModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ViewModels/TvShowViewModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/servers/Tmdb.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/servers/Tmdb.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/livewire/search-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/livewire/search-dropdown.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/movies/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/movies/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cpanel.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -61,18 +51,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TvViewModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ViewModels/TvViewModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-              <folding>
-                <element signature="e#34#64#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SearchDropdown.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Livewire/SearchDropdown.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,18 +84,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieViewModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ViewModels/MovieViewModel.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="271">
-              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="52" />
-              <folding>
-                <element signature="e#34#52#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ActorViewModel.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/ViewModels/ActorViewModel.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -130,20 +96,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search-dropdown.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="search-dropdown.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/livewire/search-dropdown.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="501">
+            <state relative-caret-position="155">
               <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActorsViewModel.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ViewModels/ActorsViewModel.php">
+      <file leaf-file-name=".editorconfig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.editorconfig">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name=".styleci.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.styleci.yml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="cpanel.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/cpanel.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="196">
-              <caret line="30" column="74" selection-start-line="30" selection-start-column="69" selection-end-line="30" selection-end-column="74" />
+            <state relative-caret-position="230">
+              <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -205,6 +181,7 @@
         <option value="$PROJECT_DIR$/app/Http/Livewire/SearchDropdown.php" />
         <option value="$PROJECT_DIR$/app/ViewModels/SearchViewModel.php" />
         <option value="$PROJECT_DIR$/resources/views/livewire/search-dropdown.blade.php" />
+        <option value="$PROJECT_DIR$/cpanel.yml" />
       </list>
     </option>
   </component>
@@ -356,57 +333,25 @@
             <path>
               <item name="netmechanics-movies" type="b2602c69:ProjectViewProjectNode" />
               <item name="netmechanics-movies" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netmechanics-movies" type="b2602c69:ProjectViewProjectNode" />
               <item name="netmechanics-movies" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Livewire" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netmechanics-movies" type="b2602c69:ProjectViewProjectNode" />
               <item name="netmechanics-movies" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="servers" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netmechanics-movies" type="b2602c69:ProjectViewProjectNode" />
               <item name="netmechanics-movies" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewModels" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netmechanics-movies" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netmechanics-movies" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netmechanics-movies" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netmechanics-movies" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netmechanics-movies" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netmechanics-movies" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="livewire" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netmechanics-movies" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netmechanics-movies" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="movies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netmechanics-movies" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netmechanics-movies" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -459,12 +404,12 @@
       <workItem from="1594441524441" duration="2149000" />
       <workItem from="1594545109115" duration="4105000" />
       <workItem from="1594597010720" duration="6479000" />
-      <workItem from="1594836608000" duration="11737000" />
+      <workItem from="1594836608000" duration="16629000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="73678000" />
+    <option name="totallyTimeSpent" value="78570000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="846" extended-state="6" />
@@ -476,7 +421,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.13682678" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.1411936" />
       <window_info anchor="right" id="Remote Host" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20939597" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -523,27 +468,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/servers/Tmdb.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2001">
-          <caret line="87" column="21" lean-forward="true" selection-start-line="87" selection-start-column="21" selection-end-line="87" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Client/Factory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="50" column="20" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/MoviesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="874">
-          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/js/bootstrap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-143" />
@@ -848,8 +772,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/livewire/search-dropdown.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
+        <state relative-caret-position="155">
           <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.editorconfig">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.styleci.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cpanel.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="10" column="25" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
     </entry>

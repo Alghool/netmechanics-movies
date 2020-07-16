@@ -1,0 +1,11 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/alghool/
+    - /bin/cp -r * $DEPLOYPATH #copy all from root
+    - /bin/cp -r ./public/* $DEPLOYPATH/public_html/
+    - /bin/cp ./public/js/*.js $DEPLOYPATH/public_html/js
+    - /bin/cp ./public/css/*.css $DEPLOYPATH/public_html/css
+    - /bin/cp ./public/img/*.png $DEPLOYPATH/public_html/img
+    - /usr/local/bin/composer install --no-dev
+    - php artisan migrate
