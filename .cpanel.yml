@@ -7,5 +7,5 @@ deployment:
     - /bin/cp ./public/js/*.js $DEPLOYPATH/public_html/movies/js
     - /bin/cp ./public/css/*.css $DEPLOYPATH/public_html/movies/css
     - /bin/cp ./public/img/*.png $DEPLOYPATH/public_html/movies/img
-    - /bin/cd $DEPLOYPATH/projects_core/movies/
+    - cd $DEPLOYPATH/projects_core/movies/
     - /usr/local/bin/composer install --no-dev
