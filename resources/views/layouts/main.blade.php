@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="movies, tv show, actor, CodeMechanic, netMechanics, Alghool" />
+    <meta name="robots" content="index, follow">
+    <meta name="copyright" content="netmechanics 2020">
+    <meta name="description" content="movies database" />
+    <meta property="og:image" content="{{ asset('img/netmechanics-movies.png') }}"/>
+    <meta name="author" content="CodeMechanic, Mahmoud Alghool">
+
     <title>NetMechanics Movies</title>
 
     <link rel="stylesheet" href="/css/main.css">
