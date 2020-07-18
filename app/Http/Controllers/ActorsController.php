@@ -14,7 +14,7 @@ class ActorsController extends Controller
 
         $popularActors = $tmdb->page($page)->popularActors()->getResponse();
 
-        return view('Actors.index', new  ActorsViewModel($popularActors));
+        return view('actors.index', new  ActorsViewModel($popularActors));
     }
 
     public function show($id)
@@ -23,6 +23,6 @@ class ActorsController extends Controller
         $actor = $tmdb->with(['external_ids','combined_credits'])->actor($id)->get();
 
 
-        return view('Actors.show',new ActorViewModel($actor));
+        return view('actors.show',new ActorViewModel($actor));
     }
 }
