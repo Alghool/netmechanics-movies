@@ -35,7 +35,7 @@ class MoviesController extends Controller
     {
         $tmdb = resolve('tmdb');
 
-        $movie = $tmdb->with(['credits','videos','images'])->movie($id)->get();
+        $movie = $tmdb->with(['credits','videos','images'])->movie($id)->get()->dump;
         return view('movies.show',new MovieViewModel($movie));
      }
 
