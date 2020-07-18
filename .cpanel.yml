@@ -3,9 +3,9 @@ deployment:
   tasks:
     - export DEPLOYPATH=/home/alghool/
     - /bin/cp -r * $DEPLOYPATH/projects_core/movies/
-    - /bin/cp -r ./public/* $DEPLOYPATH/public_html/movies/
+    - /bin/cp -r ./public/favicon.ico $DEPLOYPATH/public_html/movies/
+    - /bin/cp -r ./public/mix-manifest.json $DEPLOYPATH/public_html/movies/
+    - /bin/cp -r ./public/robots.txt $DEPLOYPATH/public_html/movies/
     - /bin/cp ./public/js/*.js $DEPLOYPATH/public_html/movies/js
     - /bin/cp ./public/css/*.css $DEPLOYPATH/public_html/movies/css
     - /bin/cp ./public/img/*.png $DEPLOYPATH/public_html/movies/img
-    - cd $DEPLOYPATH/projects_core/movies/
-    - /usr/local/bin/composer install --no-dev
