@@ -14,7 +14,7 @@
 
     <link rel="stylesheet" href="/css/main.css">
     <livewire:styles/>
-    <script src="/js/albine.js" defer></script>
+    <script src="/js/alpine.js" defer></script>
 
 </head>
 <body class="font-sans bg-gray-900 text-white">
